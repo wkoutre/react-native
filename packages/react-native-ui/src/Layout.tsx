@@ -4,7 +4,7 @@ import { type API_IndexHash, type Args, type StoryContext } from '@storybook/cor
 import type { ReactRenderer } from '@storybook/react';
 import { styled, useTheme } from '@storybook/react-native-theming';
 import { ReactNode, useRef, useState } from 'react';
-import { Platform, ScrollView, Text, View } from 'react-native';
+import { Platform, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { IconButton } from './IconButton';
 import { useLayout } from './LayoutProvider';
@@ -16,6 +16,8 @@ import { BottomBarToggleIcon } from './icon/BottomBarToggleIcon';
 import { DarkLogo } from './icon/DarkLogo';
 import { Logo } from './icon/Logo';
 import { MenuIcon } from './icon/MenuIcon';
+import { FullscreenIcon } from './icon/FullscreenIcon';
+import { CloseFullscreenIcon } from './icon/CloseFullscreenIcon';
 
 export const Layout = ({
   storyHash,
@@ -37,6 +39,8 @@ export const Layout = ({
   const [desktopSidebarOpen, setDesktopSidebarOpen] = useState(true);
 
   const [desktopAddonsPanelOpen, setDesktopAddonsPanelOpen] = useState(true);
+
+  const [uiHidden, setUiHidden] = useState(false);
 
   if (isDesktop) {
     return (
@@ -133,7 +137,29 @@ export const Layout = ({
 
   return (
     <View style={{ flex: 1, paddingTop: insets.top, backgroundColor: theme.background.content }}>
-      <View style={{ flex: 1, overflow: 'hidden' }}>{children}</View>
+      <View style={{ flex: 1, overflow: 'hidden' }}>
+        {children}
+
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            bottom: uiHidden ? 56 + insets.bottom : 16,
+            right: 16,
+            backgroundColor: 'white',
+            padding: 4,
+            borderRadius: 4,
+            borderWidth: 1,
+            borderColor: theme.appBorderColor,
+          }}
+          onPress={() => setUiHidden(!uiHidden)}
+        >
+          {uiHidden ? (
+            <CloseFullscreenIcon color={theme.color.mediumdark} />
+          ) : (
+            <FullscreenIcon color={theme.color.mediumdark} />
+          )}
+        </TouchableOpacity>
+      </View>
 
       <MobileMenuDrawer ref={mobileMenuDrawerRef} onStateChange={setDrawerOpen}>
         <View style={{ paddingLeft: 16, paddingTop: 4, paddingBottom: 4 }}>
@@ -161,7 +187,7 @@ export const Layout = ({
       </MobileMenuDrawer>
 
       <MobileAddonsPanel ref={addonPanelRef} storyId={story?.id} onStateChange={setMenuOpen} />
-      {(Platform.OS !== 'android' || (!menuOpen && !drawerOpen)) && (
+      {!uiHidden && (Platform.OS !== 'android' || (!menuOpen && !drawerOpen)) && (
         <Container style={{ marginBottom: insets.bottom }}>
           <Nav>
             <Button
