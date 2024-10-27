@@ -5415,12 +5415,12 @@ __metadata:
     "@storybook/react-native-theming": "npm:^8.4.0-alpha.0"
     "@types/jest": "npm:^29.4.3"
     "@types/react": "npm:~18.3.12"
-    babel-jest: "npm:^29.4.3"
+    babel-jest: "npm:^29.7.0"
     fuse.js: "npm:^7.0.0"
-    jest: "npm:29.7.0"
+    jest: "npm:^29.7.0"
     memoizerific: "npm:^1.11.3"
     polished: "npm:^4.3.1"
-    react-test-renderer: "npm:18.2.0"
+    react-test-renderer: "npm:^18.3.1"
     store2: "npm:^2.14.3"
     tsup: "npm:^7.2.0"
     typescript: "npm:^5.3.3"
@@ -5447,18 +5447,21 @@ __metadata:
     "@storybook/react-native-ui": "npm:^8.4.0-alpha.0"
     "@types/jest": "npm:^29.4.3"
     "@types/react": "npm:~18.3.12"
-    babel-jest: "npm:^29.4.3"
+    babel-jest: "npm:^29.7.0"
+    babel-plugin-syntax-hermes-parser: "npm:^0.25.0"
     chokidar: "npm:^3.5.1"
     commander: "npm:^8.2.0"
     dedent: "npm:^1.5.1"
     deepmerge: "npm:^4.3.0"
     glob: "npm:^7.1.7"
-    jest: "npm:29.7.0"
+    jest: "npm:^29.7.0"
     jotai: "npm:^2.6.2"
     prettier: "npm:^2.4.1"
+    react: "npm:18.3.1"
+    react-native: "npm:0.76.0"
     react-native-swipe-gestures: "npm:^1.0.5"
     react-native-url-polyfill: "npm:^2.0.0"
-    react-test-renderer: "npm:18.2.0"
+    react-test-renderer: "npm:^18.3.1"
     setimmediate: "npm:^1.0.5"
     storybook: "npm:^8.4.0-beta.0"
     tsup: "npm:^7.2.0"
@@ -5853,12 +5856,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-test-renderer@npm:18.0.7":
-  version: 18.0.7
-  resolution: "@types/react-test-renderer@npm:18.0.7"
+"@types/react-test-renderer@npm:^18.3.0":
+  version: 18.3.0
+  resolution: "@types/react-test-renderer@npm:18.3.0"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 10/701d7d815fe7b921712ebdb2c4434e99b92403d37c51b33a01ce1b62fed7d1efbf9f749971d9031a5b137c6d5e194249c378106768aa69725a01f150fef0ec7f
+  checksum: 10/c53683990bd194cb68e3987bda79c78eff41517f7a747e92f3e54217c2ce3addd031b8a45bf631982c909cc2caeeb905372f322758e05bb76c03754a3f24426e
   languageName: node
   linkType: hard
 
@@ -6936,7 +6939,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-jest@npm:^29.2.1, babel-jest@npm:^29.4.3, babel-jest@npm:^29.7.0":
+"babel-jest@npm:^29.2.1, babel-jest@npm:^29.7.0":
   version: 29.7.0
   resolution: "babel-jest@npm:29.7.0"
   dependencies:
@@ -7062,6 +7065,15 @@ __metadata:
   dependencies:
     hermes-parser: "npm:0.23.1"
   checksum: 10/5412008e8e85b08cd0d78168f746ade68b8ed69c0068831ce5e3d028f01c644f546ca0e2b7c9a4a8c6b9d5f14aff84c2453ab44b19cbec55e4366b20bbba9040
+  languageName: node
+  linkType: hard
+
+"babel-plugin-syntax-hermes-parser@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "babel-plugin-syntax-hermes-parser@npm:0.25.0"
+  dependencies:
+    hermes-parser: "npm:0.25.0"
+  checksum: 10/63ce216cdeae19f2bb084116f7f091b9e7cb2bdaf99715c489aa70a6eec71fd3f03168aa7b53953b604ba07548454c9f72b0f8f2bdaf340933785fbbe6c4bbdd
   languageName: node
   linkType: hard
 
@@ -9856,13 +9868,13 @@ __metadata:
     "@storybook/test": "npm:^8.4.0-beta.0"
     "@testing-library/react-native": "npm:12.4.3"
     "@types/react": "npm:~18.3.12"
-    "@types/react-test-renderer": "npm:18.0.7"
+    "@types/react-test-renderer": "npm:^18.3.0"
     "@types/ws": "npm:^8.5.10"
     babel-loader: "npm:^9.1.3"
     babel-plugin-react-docgen-typescript: "npm:^1.5.1"
     expo: "npm:next"
     history: "npm:^5.3.0"
-    jest: "npm:29.7.0"
+    jest: "npm:^29.7.0"
     jest-expo: "npm:52.0.0-preview.1"
     metro-react-native-babel-preset: "npm:^0.77.0"
     querystring: "npm:^0.2.1"
@@ -11014,6 +11026,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hermes-estree@npm:0.25.0":
+  version: 0.25.0
+  resolution: "hermes-estree@npm:0.25.0"
+  checksum: 10/970abf15964ac8742071f47302d42c56ed5c6657c01ea5c59dd306f3e39814ba3ee5e860ce59f4b547a7f6ee6360ae5f6643fcae3fd374b32b1fab6dbc72e347
+  languageName: node
+  linkType: hard
+
 "hermes-parser@npm:0.19.1":
   version: 0.19.1
   resolution: "hermes-parser@npm:0.19.1"
@@ -11038,6 +11057,15 @@ __metadata:
   dependencies:
     hermes-estree: "npm:0.24.0"
   checksum: 10/c473cf2c3a4dd3fa835c52fe67b4554e88da40cecb4cfd12f0860004eea77256c34c8d5881ef3e0f8bd529edb8f71e1296296e8282b6aee2d1399a97e787ad33
+  languageName: node
+  linkType: hard
+
+"hermes-parser@npm:0.25.0":
+  version: 0.25.0
+  resolution: "hermes-parser@npm:0.25.0"
+  dependencies:
+    hermes-estree: "npm:0.25.0"
+  checksum: 10/752838dd0758af339dd4e0a36487a4dd12d5e1a7f8629c56446d5dd98010a43095c73fa3236bbd267cd1f3702bcbe58780287ea9f39275cd3c47bc2c2bc68625
   languageName: node
   linkType: hard
 
@@ -12545,7 +12573,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:29.7.0":
+"jest@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest@npm:29.7.0"
   dependencies:
@@ -15867,7 +15895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0, react-is@npm:^18.2.0, react-is@npm:^18.3.1":
+"react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0, react-is@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-is@npm:18.3.1"
   checksum: 10/d5f60c87d285af24b1e1e7eaeb123ec256c3c8bdea7061ab3932e3e14685708221bf234ec50b21e10dd07f008f1b966a2730a0ce4ff67905b3872ff2042aec22
@@ -16137,20 +16165,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react-test-renderer@npm:18.2.0"
-  dependencies:
-    react-is: "npm:^18.2.0"
-    react-shallow-renderer: "npm:^16.15.0"
-    scheduler: "npm:^0.23.0"
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 10/39473e43f64eec92da35db9d4411f3887b368038670787d49dd23172eb3a29953eb13767d1bfa34cbe2665b6e25632cad146e362e8910ce33755d343537763ae
-  languageName: node
-  linkType: hard
-
-"react-test-renderer@npm:18.3.1":
+"react-test-renderer@npm:18.3.1, react-test-renderer@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-test-renderer@npm:18.3.1"
   dependencies:
@@ -16772,7 +16787,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.0, scheduler@npm:^0.23.2":
+"scheduler@npm:^0.23.2":
   version: 0.23.2
   resolution: "scheduler@npm:0.23.2"
   dependencies:
