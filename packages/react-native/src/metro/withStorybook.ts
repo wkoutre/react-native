@@ -182,3 +182,5 @@ export function withStorybook(
     },
   };
 }
+
+export default withStorybook;
