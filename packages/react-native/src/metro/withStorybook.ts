@@ -74,7 +74,7 @@ type ResolveRequestFunction = (context: any, moduleName: string, platform: strin
  *   onDisabledRemoveStorybook: true,
  * });
  */
-function withStorybook(
+export function withStorybook(
   config: MetroConfig,
   options: WithStorybookOptions = {
     enabled: true,
@@ -182,5 +182,3 @@ function withStorybook(
     },
   };
 }
-
-export = withStorybook;
