@@ -183,8 +183,4 @@ function withStorybook(
   };
 }
 
-export { withStorybook };
-
-module.exports = withStorybook;
-
-module.exports.withStorybook = withStorybook;
+export = withStorybook;
