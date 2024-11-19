@@ -5620,7 +5620,6 @@ __metadata:
     react-native-safe-area-context: "*"
   bin:
     sb-rn-get-stories: ./bin/get-stories.js
-    sb-rn-watcher: ./bin/watcher.js
   languageName: unknown
   linkType: soft
 
