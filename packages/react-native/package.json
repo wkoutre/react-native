@@ -19,8 +19,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "bin": {
-    "sb-rn-get-stories": "./bin/get-stories.js",
-    "sb-rn-watcher": "./bin/watcher.js"
+    "sb-rn-get-stories": "./bin/get-stories.js"
   },
   "exports": {
     ".": "./dist/index.js",
